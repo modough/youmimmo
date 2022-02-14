@@ -1,0 +1,64 @@
+@use "../utils/linear-gradient";
+
+.image img{
+    width: 100%;
+    height: 520px;
+    object-fit: cover;      
+}
+
+.menus-image{ 
+
+    .menus {
+        padding: 0 50px;
+        margin-top: -75px;
+        @media  screen and (max-width: 768px) {
+            padding: 0;
+            
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            background-color: var(--lightgrey);
+            padding: 15px;
+            border-radius: 30px 30px 0 0;
+            position: relative;
+            
+            h2 {
+                font-family: 'Sonsie One', cursive;
+                
+            }
+            
+            h2:first-letter {
+                text-transform: capitalize;
+            }
+
+            i{
+                position: absolute;
+                right: 30px;
+                top: 38%;
+                font-size: x-large;
+                color: black; 
+
+                
+
+                &::before {
+                    content: "\f004";    
+                }
+    
+                &:hover {
+                    font-weight: 900;
+                    color: transparent;
+                    @include linear-gradient.background-image;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    transition: all .5s ease-in-out;
+                }
+            }    
+        }
+    
+    }
+    
+}
+
+

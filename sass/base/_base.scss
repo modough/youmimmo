@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&family=Sonsie+One&display=swap');
+
+*,
+::before,
+::after{
+    box-sizing: border-box;
+}
+
+:root{
+    --green:#15562C;
+    --lightblue:#bdd5fa;
+   --purple:#9356DC;
+   --pink:#FF79DA ;
+   --lightgreen:#99E2D0;
+   --lightergrey:#f3f3f3;
+   --lightgrey:#e6e6e6;
+   --box-shadow:rgba(0, 0, 0, 0.3) 0px 3px 8px;
+
+}
+
+body{
+    margin: 0;
+    font-family: "roboto", sans-serif;
+}

@@ -1,0 +1,485 @@
+/*GENERAL*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gravitas+One&family=Sonsie+One&display=swap");
+@keyframes disappearance {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+.loader {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  inset: 0;
+  z-index: 1;
+  animation: disappearance 0.1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  transform-origin: center;
+}
+.loader .loader1 {
+  margin-left: auto;
+  padding: 5px;
+  color: var(--lightgreen);
+  animation: spin-animation 0.3s infinite;
+}
+.loader .loader2 {
+  padding: 5px;
+  color: var(--lightblue);
+  animation: spin-animation 0.3s infinite;
+}
+.loader .loader3 {
+  margin-right: auto;
+  padding: 5px;
+  color: #5a5252;
+  animation: spin-animation 0.3s infinite;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --green:#15562C;
+  --lightblue:#bdd5fa;
+  --purple:#9356DC;
+  --pink:#FF79DA ;
+  --lightgreen:#99E2D0;
+  --lightergrey:#f3f3f3;
+  --lightgrey:#e6e6e6;
+  --box-shadow:rgba(0, 0, 0, 0.3) 0px 3px 8px;
+}
+
+body {
+  margin: 0;
+  font-family: "roboto", sans-serif;
+}
+
+#logo {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+  position: relative;
+}
+#logo h1 {
+  font-family: "Sonsie One", cursive;
+  margin: 5px auto;
+}
+
+.search-city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6e6e6;
+}
+.search-city i {
+  font-size: larger;
+  padding-right: 10px;
+}
+
+.search-infos {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 20px;
+}
+.search-infos a {
+  width: 216px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none;
+  border-radius: 30px;
+  background-image: linear-gradient(var(--lightgreen), var(--lightblue));
+  padding: 15px 20px;
+}
+.search-infos a:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.ordering-method {
+  padding: 30px;
+}
+.ordering-method h2 {
+  margin-bottom: 0;
+}
+
+.ordering-steps {
+  display: flex;
+  gap: 30px;
+  padding-left: 15px;
+  margin: 0;
+}
+@media (max-width: 916px) {
+  .ordering-steps {
+    flex-direction: column;
+  }
+}
+.ordering-steps li {
+  list-style-type: none;
+  padding: 20px 15px;
+  background-color: var(--lightblue);
+  color: #302e2e;
+  border-radius: 15px;
+  flex-grow: 1;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.ordering-steps li i.fas {
+  margin-right: 10px;
+}
+.ordering-steps li:hover {
+  background-color: var(--lightgreen);
+}
+
+.house-list {
+  background-color: var(--lightgrey);
+  padding: 30px;
+}
+.house-list h2 {
+  font-family: "Sonsie One", cursive;
+}
+.house-list .house-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.house-list .house-card-list .house-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  flex-grow: 1;
+  flex-basis: 45%;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .house-list .house-card-list .house-card {
+    flex-basis: 100%;
+  }
+}
+.house-list .house-card-list .house-card .image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 20px 20px 0 0;
+  background-size: cover;
+  background-position: center;
+}
+.house-list .house-card-list .house-card .image span {
+  background-color: var(--lightgreen);
+  color: #288c74;
+  padding: 10px 15px;
+  border-radius: 2px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-weight: bold;
+}
+.house-list .house-card-list .house-card .image1 {
+  background-image: url(../images/1.jpg);
+}
+.house-list .house-card-list .house-card .image2 {
+  background-image: url(../images/2.jpg);
+}
+.house-list .house-card-list .house-card .image3 {
+  background-image: url(../images/3.jpg);
+}
+.house-list .house-card-list .house-card .image4 {
+  background-image: url(../images/4.jpg);
+}
+.house-list .house-card-list .house-card .card-details {
+  position: relative;
+  padding: 20px;
+}
+.house-list .house-card-list .house-card .card-details h3, .house-list .house-card-list .house-card .card-details i, .house-list .house-card-list .house-card .card-details p {
+  margin: 0;
+  color: black;
+}
+.house-list .house-card-list .house-card .card-details h3 {
+  margin-bottom: 15px;
+}
+.house-list .house-card-list .house-card .card-details h3::first-letter {
+  text-transform: capitalize;
+}
+.house-list .house-card-list .house-card .card-details i {
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  font-size: x-large;
+  color: black;
+}
+.house-list .house-card-list .house-card .card-details i::before {
+  content: "\f004";
+}
+.house-list .house-card-list .house-card .card-details i:hover {
+  font-weight: 900;
+  color: transparent;
+  background-image: linear-gradient(var(--lightgreen), var(--lightblue));
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 0.5s ease-in-out;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+header h1 {
+  font-family: "Sonsie One", cursive;
+  margin: 5px auto;
+}
+header i {
+  font-size: larger;
+  margin-left: 30px;
+  color: black;
+}
+header i:hover {
+  transform: scale(1.05);
+}
+
+.image img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+.menus-image .menus {
+  padding: 0 50px;
+  margin-top: -75px;
+}
+@media screen and (max-width: 768px) {
+  .menus-image .menus {
+    padding: 0;
+  }
+}
+.menus-image .menus .title {
+  display: flex;
+  align-items: center;
+  background-color: var(--lightgrey);
+  padding: 15px;
+  border-radius: 30px 30px 0 0;
+  position: relative;
+}
+.menus-image .menus .title h2 {
+  font-family: "Sonsie One", cursive;
+}
+.menus-image .menus .title h2:first-letter {
+  text-transform: capitalize;
+}
+.menus-image .menus .title i {
+  position: absolute;
+  right: 30px;
+  top: 38%;
+  font-size: x-large;
+  color: black;
+}
+.menus-image .menus .title i::before {
+  content: "\f004";
+}
+.menus-image .menus .title i:hover {
+  font-weight: 900;
+  color: transparent;
+  background-image: linear-gradient(var(--lightgreen), var(--lightblue));
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes fade {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes spin-animation {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes show {
+  0% {
+    transform: translateX(0%);
+    transition: transform 0.5s ease-in-out;
+  }
+  100% {
+    transform: translateX(100%);
+    transition: transform ease-in-out 0.3s;
+  }
+}
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lightgrey);
+  border-radius: 30px 30px 0 0;
+}
+.menu-list a {
+  text-decoration: none;
+}
+.menu-list .button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.menu-list .button:hover {
+  transform: scale(1.05);
+}
+.menu-list .button p {
+  padding: 15px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+  background-image: linear-gradient(var(--lightgreen), var(--lightblue));
+}
+.menu-list .wrapper {
+  display: flex;
+  column-gap: 40px;
+  margin: 0 15px;
+}
+@media screen and (max-width: 768px) {
+  .menu-list .wrapper {
+    flex-direction: column;
+  }
+}
+.menu-list .menu {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu-list .menu h3 {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 400;
+  flex-basis: 95%;
+}
+.menu-list .menu h3::before {
+  content: "";
+  border-bottom: 4px solid var(--lightgreen);
+  position: absolute;
+  width: 12%;
+  top: 25px;
+}
+.menu-list .menu .details {
+  display: flex;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  flex-basis: 95%;
+  margin-bottom: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .menu-list .menu .details {
+    max-width: 100%;
+  }
+}
+.menu-list .menu .details p {
+  margin: 0 10px;
+}
+.menu-list .menu .details .details-price {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  padding: 10px;
+}
+.menu-list .menu .details .details-price .bold {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.menu-list .menu .details .details-price p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu-list .menu .details .price {
+  align-self: end;
+  padding: 10px 0;
+  transform: translateX(245%);
+  transition: transform 0.3s ease-in-out;
+}
+.menu-list .menu .details:hover .price {
+  transform: translateX(0%);
+  transition: transform 0.5s ease-in-out;
+}
+.menu-list .menu .details .green-check {
+  background-color: var(--lightgreen);
+  color: white;
+  font-size: x-large;
+  padding: 22px 20px;
+  transform: translateX(100%);
+  transition: transform ease-in-out 0.3s;
+}
+.menu-list .menu .details:hover .green-check {
+  transform: translateX(0%);
+  transition: transform 0.5s ease-in-out;
+}
+.menu-list .menu .details:hover .green-check i {
+  animation: spin-animation 0.5s ease-in-out;
+}
+.menu-list .menu .details1 {
+  animation: fade 1s linear;
+}
+.menu-list .menu .details2 {
+  animation: fade 2s linear;
+}
+.menu-list .menu .details3 {
+  animation: fade 2.5s linear;
+}
+.menu-list .menu .details4 {
+  animation: fade 3s linear;
+}
+
+footer {
+  background-color: #5a5252;
+  padding: 20px 30px;
+}
+footer h1 {
+  color: white;
+  font-family: "Sonsie One", cursive;
+}
+footer p {
+  color: white;
+}
+footer i {
+  margin-right: 5px;
+}
+footer .fa-hands-helping {
+  font-size: x-small;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */

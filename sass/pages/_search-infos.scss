@@ -1,0 +1,30 @@
+@use "../utils/linear-gradient";
+@use "../utils/hover-transform";
+
+.search-infos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 20px;
+
+    a {
+        width: 216px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border: none;
+        border-radius: 30px;
+        @include linear-gradient.background-image;
+        padding: 15px 20px;
+        
+    }
+
+    a:hover{
+        cursor: pointer;
+        @include hover-transform.transform;
+        opacity: .9;   
+    }
+}

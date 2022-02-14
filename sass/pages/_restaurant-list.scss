@@ -1,0 +1,102 @@
+@use "../utils/linear-gradient";
+
+.house-list{
+    background-color: var(--lightgrey);
+    padding: 30px;
+
+    h2 {
+        font-family: 'Sonsie One', cursive;
+    }
+
+    .house-card-list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    
+        .house-card{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 20px;
+            flex-grow: 1;
+            flex-basis: 45%;  
+            text-decoration: none;
+
+            @media(max-width:768px) {
+                flex-basis: 100%;  
+            }
+            
+            .image{
+                position: relative;
+                width: 100%;
+                height: 200px;
+                border-radius: 20px 20px 0 0;
+                background-size: cover;
+                background-position: center;
+
+                span{
+                    background-color: var(--lightgreen);
+                    color: #288c74;
+                    padding: 10px 15px;
+                    border-radius: 2px;
+                    position: absolute;
+                    right: 15px;
+                    top: 15px;
+                    font-weight: bold;
+                }
+            }
+            
+            @for $i from 1 through 4 {
+                .image#{$i}{
+                    background-image: url(../images/#{$i}.jpg);
+
+                }
+                
+            }
+            .card-details{
+                position: relative;
+                padding: 20px;
+
+                h3, i, p{
+                    margin: 0;
+                    color: black;
+                }
+
+                h3{
+                    margin-bottom: 15px;
+                    &::first-letter{
+                        text-transform: capitalize;
+                    }
+                }
+                
+                i{
+                    position: absolute;
+                    right: 20px;
+                    top: 30%;
+                    font-size: x-large;
+                    color: black; 
+
+                    &::before {
+                        content: "\f004";    
+                    }
+
+                    &:hover {
+                        font-weight: 900;
+                        color: transparent;
+                        @include linear-gradient.background-image;
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        transition: all .5s ease-in-out;
+                    }
+
+                }
+            
+            }
+        }  
+    }
+}
+
+
+
+
+
