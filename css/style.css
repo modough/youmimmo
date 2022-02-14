@@ -68,8 +68,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
   position: relative;
 }
-#logo h1 {
-  font-family: "Sonsie One", cursive;
+#logo img {
   margin: 5px auto;
 }
 
