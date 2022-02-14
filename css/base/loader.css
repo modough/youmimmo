@@ -11,31 +11,32 @@
   display: flex;
   align-items: center;
   position: fixed;
+  flex-wrap: wrap;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.8);
   inset: 0;
   z-index: 1;
   animation: disappearance 0.1s ease-in-out;
   animation-fill-mode: forwards;
-  animation-delay: 2s;
+  animation-delay: 5s;
   transform-origin: center;
 }
 .loader .loader1 {
   margin-left: auto;
   padding: 5px;
   color: var(--lightgreen);
-  animation: spin-animation 0.3s infinite;
+  animation: spin-animation 0.7s infinite;
 }
 .loader .loader2 {
   padding: 5px;
   color: var(--lightblue);
-  animation: spin-animation 0.3s infinite;
+  animation: spin-animation 0.8s infinite;
 }
 .loader .loader3 {
   margin-right: auto;
   padding: 5px;
   color: #5a5252;
-  animation: spin-animation 0.3s infinite;
+  animation: spin-animation 0.9s infinite;
 }
 
 /*# sourceMappingURL=loader.css.map */

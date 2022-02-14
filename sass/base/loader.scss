@@ -5,36 +5,34 @@
     display: flex;
     align-items: center;
     position: fixed;
+    flex-wrap: wrap;
     height: 100%;
     background-color: rgb(255, 255, 255, 0.8);
     inset: 0;
     z-index: 1;
     animation: disappearance 0.1s ease-in-out;
     animation-fill-mode: forwards;
-    animation-delay: 2s;
+    animation-delay: 5s;
     transform-origin: center;
     
-
     .loader1 {
         margin-left: auto;
         padding: 5px;
         color: var(--lightgreen);
-        animation: spin-animation .3s infinite;
-
-
+        animation: spin-animation .7s infinite;
     }
 
     .loader2 {
         padding: 5px;
         color: var(--lightblue);
-        animation: spin-animation .3s infinite;
+        animation: spin-animation .8s infinite;
     }
 
     .loader3 {
         margin-right: auto;
         padding: 5px;
         color: rgb(90, 82, 82);
-        animation: spin-animation .3s infinite;
+        animation: spin-animation .9s infinite;
     }
     
 }
