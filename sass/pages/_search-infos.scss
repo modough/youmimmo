@@ -5,35 +5,70 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #f3f3f3;
     text-align: center;
     padding: 20px;
+    column-gap: 20px;
+    background-image: url(/images/cle\ en\ main.jpg);
+    background-size: cover;
+    background-position: center;
+    
 
-    p {
+    .background {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(253, 251, 251, 0.5);
         
-        font-weight: bold;
-    }
+       
 
-    h2 {
-        color: rgb(90, 82, 82);
-    }
+        p {
+            flex-grow: 1;
+            font-weight: bold;
+            font-size: xx-large;
+            color: black;
+            border-radius: 15px;
+            padding: 0 10px;
+            
+        }
+    
+        h2 {
+            flex-wrap: nowrap;
+            flex-grow: 1;
+            color: rgb(90, 82, 82);
+            margin-top: 0;
+            margin-bottom: 100px;
+            color: black;
+            border-radius: 15px;
+            padding: 0 10px;
+        }
+    
+        a { 
+           
+            top: 205px;
+            align-self: center;
+            flex-grow: 1;
+            width: 216px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border: none;
+            border-radius: 30px;
+            @include linear-gradient.background-image;
+            padding: 15px 20px;
+            margin-bottom: 40px;
+            
+        }
+    
+        a:hover{
+            cursor: pointer;
+            @include hover-transform.transform;
+            opacity: .9;   
+        }
 
-    a {
-        width: 216px;
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        border: none;
-        border-radius: 30px;
-        @include linear-gradient.background-image;
-        padding: 15px 20px;
-        
-    }
 
-    a:hover{
-        cursor: pointer;
-        @include hover-transform.transform;
-        opacity: .9;   
     }
+   
+    
 }

@@ -1,10 +1,12 @@
 @use "../utils/hover-transform";
 
+
 header{
     display: flex;
     align-items: center;
     padding: 15px;
 
+    
     h1 {
         font-family: 'Sonsie One', cursive;
         margin: 5px auto;

@@ -6,10 +6,12 @@ footer {
     h1 {
         color: white;
         font-family: 'Sonsie One', cursive;
+        padding: 0 10px;
     }
 
     p {
         color: white;
+        padding: 0 10px;
     }
 
     i {
@@ -23,6 +25,8 @@ footer {
     a {
         color: white;
         text-decoration: none;
+        border-right: 3px solid white;
+        padding: 0 10px;
         
     }
 

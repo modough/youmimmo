@@ -1,4 +1,5 @@
 @mixin background-image {
     background-image: linear-gradient(var(--green), var(--lightblue));
+    opacity: .7;
     
 }

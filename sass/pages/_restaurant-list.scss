@@ -1,32 +1,71 @@
 @use "../utils/linear-gradient";
+@use "../utils/_shadow";
+@use "../utils/hover-transform";
 
 .house-list{
     background-color: var(--lightgrey);
     padding: 30px;
+    .first-title {
+        border: none;
+    }
 
     h2 {
         font-family: 'Sonsie One', cursive;
+        margin: 20px;
+        
+        
+    }
+    p {
+        padding: 0 20px;
     }
 
     .house-card-list{
         display: flex;
         flex-wrap: wrap;
+        margin: 20px 0 50px 0;
         gap: 20px;
-    
-        .house-card{
-            display: flex;
-            flex-direction: column;
+
+        p {
+            margin: 20px;
+            
+        }
+        
+
+        .house-card {
+            flex-basis: 45%;
             background-color: white;
+        }
+
+        .villa-card {
+            flex-basis: 20%; 
+        }
+
+        
+    
+        .house-card, .villa-card {
+            display: flex;
+            flex-direction: column; 
             border-radius: 20px;
-            flex-grow: 1;
-            flex-basis: 45%;  
+            flex-grow: 1; 
             text-decoration: none;
 
             @media(max-width:768px) {
                 flex-basis: 100%;  
             }
             
-            .image{
+            .villa {
+               
+                 
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                    max-height: 300px;
+                    border-radius: 15px;
+                }    
+            }
+
+            .image {
                 position: relative;
                 width: 100%;
                 height: 200px;
@@ -34,7 +73,7 @@
                 background-size: cover;
                 background-position: center;
 
-                span{
+                span {
                     background-color: var(--lightgreen);
                     color: #288c74;
                     padding: 10px 15px;
@@ -47,12 +86,14 @@
             }
             
             @for $i from 1 through 4 {
-                .image#{$i}{
+                .image#{$i} {
                     background-image: url(../images/#{$i}.jpg);
 
-                }
-                
+                }    
             }
+            
+           
+
             .card-details{
                 position: relative;
                 padding: 20px;
@@ -93,6 +134,28 @@
             
             }
         }  
+    }
+
+    .button {
+        display: flex;
+        align-self: center;
+        width: 153px;
+        margin: 0 auto;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+            @include hover-transform.transform;
+        }
+
+        p {
+            padding: 15px 20px;
+            color: white;
+            font-weight: bold;
+            border-radius: 30px;
+            @include shadow.box-shadow;
+            @include linear-gradient.background-image;
+        }
     }
 }
 
